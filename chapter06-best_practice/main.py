@@ -18,6 +18,7 @@ def test(**kwargs):
     model = getattr(models, opt.model)().eval()
     if opt.load_model_path:
         model.load(opt.load_model_path)
+        print('load')
     model.to(opt.device)
 
     # data
